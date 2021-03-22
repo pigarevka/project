@@ -1,0 +1,37 @@
+html,
+body {
+	height: 100%;
+	font-family: $font-family;
+	color: $text-paragraph-color;
+	font-size: $font-size;
+	font-weight: 400;
+}
+
+body.lock {
+	overflow: hidden;
+}
+
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+
+main {
+	flex: 1 0 auto;
+}
+
+.width-container{
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 10px;
+
+	@media screen and (max-width: 768.98px) {
+		padding: 0 40px;
+	}
+
+	@media screen and (max-width: 480.98px) {
+		padding: 0 10px;
+	}
+}
+
