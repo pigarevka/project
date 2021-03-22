@@ -85,7 +85,8 @@ main {
   border-radius: 10px;
   font-size: 20px;
   font-weight: 700;
-  padding: 17px 0;
+  padding: 16.5px 0;
+  line-height: 20px;
 }
 
 .btn:hover {
@@ -111,6 +112,14 @@ main {
   border-color: #C774EE;
   -webkit-box-shadow: none;
           box-shadow: none;
+}
+
+.title {
+  font-family: 'Epilogue';
+  font-size: 32px;
+  font-weight: 700;
+  color: #111563;
+  line-height: 38px;
 }
 
 @font-face {
@@ -266,6 +275,80 @@ main {
 
 .burger {
   display: none;
+}
+
+.promo {
+  padding: 105px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.promo__descr {
+  width: 50%;
+  padding-right: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.promo__title {
+  margin-bottom: 20px;
+  line-height: 50px;
+  font-size: 42px;
+}
+
+.promo__text {
+  margin-bottom: 30px;
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.promo__btn {
+  width: 280px;
+}
+
+.promo__img {
+  width: 50%;
+}
+
+.promo__img img {
+  width: 118%;
+  margin-right: -100px;
+}
+
+@media screen and (max-width: 1400.98px) {
+  .promo__img img {
+    width: 100%;
+    margin-right: 0;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 1024.98px) {
+  .promo {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+
+  .promo__descr {
+    width: 100%;
+    padding-right: 0;
+    margin-bottom: 40px;
+  }
+
+  .promo__img {
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 840.98px) {
@@ -449,10 +532,45 @@ main {
             transform: rotate(-45deg);
     bottom: 16px;
   }
+
+  .promo {
+    padding: 67px 0 50px;
+  }
+
+  .promo__text {
+    margin-bottom: 20px;
+  }
+
+  .promo__img {
+    width: 80%;
+  }
 }
 
 @media screen and (max-width: 480.98px) {
   .width-container {
     padding: 0 10px;
+  }
+
+  .title {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .promo {
+    padding: 50px 0 40px;
+  }
+
+  .promo__descr {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .promo__text {
+    margin-bottom: 30px;
+  }
+
+  .promo__btn {
+    width: 300px;
   }
 }
