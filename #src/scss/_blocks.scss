@@ -42,4 +42,13 @@
 		font-size: 22px;
 		line-height: 22px;
 	}
+
+	&_18px {
+		font-size: 18px;
+
+		@media screen and (max-width: 480.98px) {
+			font-size: 18px;
+			line-height: 2;
+		}
+	}
 }
