@@ -13,4 +13,47 @@ $(document).ready(function () {{
 	$(document).on('click', '.header__overlay.active', function (event) {
 		toggleMainMenu();
 	});
+
+	@@include('slick.min.js');
+
+	//slider reviews
+	$('.reviews__slider').slick({
+		slidesToShow: 3,
+		arrows: false,
+		dots: true,
+		infinite: true,
+		responsive: [
+			{
+				breakpoint: 1185.98,
+				settings: {
+					slidesToShow: 2,
+					centerPadding: '10%',
+					centerMode: true
+				}
+			},
+			{
+				breakpoint: 980.98,
+				settings: {
+					centerPadding: '0',
+					slidesToShow: 2,
+				}
+			},
+			{
+				breakpoint: 768.98,
+				settings: {
+					centerMode: true,
+					centerPadding: '21%',
+					slidesToShow: 1,
+				}
+			},
+			{
+				breakpoint: 600.98,
+				settings: {
+					centerMode: true,
+					centerPadding: '0',
+					slidesToShow: 1
+				}
+			}
+		]
+	});
 }});

@@ -1,0 +1,161 @@
+.reviews {
+	padding: 68px 0 40px;
+	text-align: center;
+
+	&__title {
+		margin-bottom: 16px;
+
+		@media screen and (max-width: 480.98px) {
+			text-align: start;
+		}
+	}
+
+	&__text {
+		margin-bottom: 20px;
+		font-size: 18px;
+
+		@media screen and (max-width: 480.98px) {
+			font-size: 16px;
+			margin-bottom: 60px;
+			text-align: start;
+		}
+	}
+
+	&__slider {
+		margin: 0 -10px;
+		position: relative;
+
+		& .slick-track{
+			display: flex;
+			justify-content: center;
+		}
+
+		& .slick-list {
+			overflow: hidden;
+		}
+
+		& .slick-dots{
+			display: flex;
+			position: absolute;
+			bottom: -92px;
+			left: 50%;
+			transform: translateX(-50%);
+	
+			& li{
+				margin-left: 7px;
+
+				& button {
+					font-size: 0;
+					width: 15px;
+					height: 15px;
+					border-radius: 50%;
+					opacity: 0.6;
+					background-color: #E8F8FF;
+				}
+
+				&.slick-active button {
+					background-color: #286DBD;
+				}
+			}
+		}
+	}
+
+	&__slider-item {
+		margin: 5px 10px;
+	}
+
+	&__btn {
+		font-family: 'Epilogue';
+		font-weight: 700;
+		border-bottom: dotted;
+		border-color: $main-color;
+		color: $main-color;
+		padding-bottom: 10px;
+		margin-top: 30px;
+
+	}
+}
+
+.slider-card {
+	display: flex;
+	flex-direction: column;
+	max-width: 380px;
+	box-shadow: 0px 2px 16px rgba(32, 108, 164, 0.16);
+	border-radius: 8px;
+	padding: 33px 31px 30px;
+	text-align: left;
+	min-height: 500px;
+	margin: 0 auto;
+
+	@media screen and (max-width: 720.98px) {
+		width: 300px;
+		padding: 37px 17px;
+		min-height: 437px;
+	}
+
+	&__rating {
+		position: relative;
+		margin-bottom: 46px;
+		text-align: center;
+		padding-left: 8px;
+		font-size: 18px;
+
+		@media screen and (max-width: 720.98px) {
+			padding-left: 0px;
+			padding-right: 70px;
+		}
+
+		&::after {
+			content: "";
+			display: block;
+			background-image: url('../img/reviews/quote.svg');
+			top: -10px;
+			width: 45px;
+			height: 46px;
+			left: 0;
+			position: absolute;
+		}
+
+		&::before {
+			content: "★★★★★";
+			display: block;
+			font-size: 32px;
+			color: $main-color;
+			position: absolute;
+			right: 0;
+			top: -11px;
+
+		}
+	}
+
+	&__text-reviews {
+		font-style: italic;
+		font-size: 18px;
+		max-width: 298px;
+		flex: 1 1 auto;
+
+		@media screen and (max-width: 720.98px) {
+			font-size: 16px;
+		}
+	}
+
+	&__info {
+	}
+
+	&__user {
+		display: flex;
+		margin-bottom: 10px;
+	}
+
+	&__photo {
+		width: 24px;
+		height: 24px;
+	}
+
+	&__user-name {
+		margin-left: 10px;
+	}
+
+	&__category {
+	}
+}
