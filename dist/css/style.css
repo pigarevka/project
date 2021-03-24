@@ -50,7 +50,7 @@ body {
   height: 100%;
   font-family: "Open Sans", Arial, sans-serif;
   color: #63718E;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 400;
 }
 
@@ -703,6 +703,55 @@ main {
   position: absolute;
 }
 
+.text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 50px 0 8px;
+}
+
+.text__item {
+  width: 50%;
+  margin-bottom: 62px;
+}
+
+.text__item:nth-child(1) {
+  padding-right: 30px;
+}
+
+.text__item img {
+  width: 100%;
+}
+
+.text__title {
+  margin-bottom: 20px;
+}
+
+.text__text {
+  font-size: 18px;
+}
+
+.text__card {
+  position: relative;
+}
+
+.text__card::before {
+  content: '';
+  position: absolute;
+  background-image: url("../img/text/bg.svg");
+  top: 0px;
+  left: -38px;
+  display: block;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
 @media screen and (max-width: 1400.98px) {
   .promo__img img {
     width: 100%;
@@ -766,6 +815,35 @@ main {
 @media screen and (max-width: 880.98px) {
   .content__img {
     padding-top: 30px;
+  }
+
+  .text__item {
+    width: 100%;
+  }
+
+  .text__item:nth-child(1) {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    padding-right: 0;
+  }
+
+  .text__item:nth-child(2) {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+
+  .text__item:nth-child(3) {
+    -webkit-box-ordinal-group: 4;
+        -ms-flex-order: 3;
+            order: 3;
+  }
+
+  .text__item:nth-child(4) {
+    -webkit-box-ordinal-group: 5;
+        -ms-flex-order: 4;
+            order: 4;
   }
 }
 
@@ -1086,6 +1164,10 @@ main {
   .advantages__descr {
     width: 100%;
   }
+
+  .text__card {
+    margin: 35px auto 0;
+  }
 }
 
 @media screen and (max-width: 720.98px) {
@@ -1200,5 +1282,20 @@ main {
 
   .advantages__title {
     margin-bottom: 39px;
+  }
+
+  .text {
+    padding: 60px 0 20px;
+  }
+
+  .text__item {
+    margin-bottom: 30px;
+  }
+
+  .text__card::before {
+    top: -37px;
+    left: -3px;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
