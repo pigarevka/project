@@ -56,4 +56,12 @@ $(document).ready(function () {{
 			}
 		]
 	});
+
+	//content tabs
+	$('.tabs__item').on('click', function() {
+		$('.tabs__item').removeClass('tabs__item_active');
+		$(this).addClass('tabs__item_active');
+		$('.tabs__text').hide().eq($(this).index()).fadeIn()
+		.eq(0).addClass('tabs__text_active');
+	})
 }});

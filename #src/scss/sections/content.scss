@@ -1,0 +1,191 @@
+.content {
+	padding: 100px 0 50px;
+
+	@media screen and (max-width: 768.98px) {
+		padding: 70px 0 20px;
+	}
+
+	&__block {
+		display: flex;
+
+		@media screen and (max-width: 768.98px) {
+			flex-direction: column;
+		}
+	}
+
+	&__descr {
+		width: 50%;
+
+		@media screen and (max-width: 768.98px) {
+			width: 100%;
+		}
+	}
+
+	&__title {
+		margin-top: 87px;
+
+		@media screen and (max-width: 1024.98px) {
+			margin-top: 0;
+		}
+
+		@media screen and (max-width: 768.98px) {
+			max-width: 580px;
+		}
+	}
+
+	&__text {
+		margin-top: 16px;
+		font-size: 18px;
+		max-width: 582px;
+
+		@media screen and (max-width: 768.98px) {
+			max-width: 100%;
+		}
+
+		@media screen and (max-width: 480.98px) {
+			margin-top: 10px;
+			font-size: 16px;
+			display: none;
+		}
+
+		&_sm {
+			display: none;
+
+			@media screen and (max-width: 480.98px) {
+				display: block;
+			}
+		}
+	}
+
+	&__img {
+		width: 50%;
+
+		@media screen and (max-width: 880.98px) {
+			padding-top: 30px;
+		}
+
+		@media screen and (max-width: 768.98px) {
+			width: 100%;
+			padding: 0;
+			margin-top: 47px;
+		}
+
+		@media screen and (max-width: 480.98px) {;
+			margin-top: 16px;
+		}
+
+		& img {
+			width: 100%;
+
+			@media screen and (max-width: 768.98px) {
+				max-width: 540px;
+			}
+		}
+	}
+
+	&__tabs {
+		margin-top: 20px;
+	}
+}
+
+.tabs {
+	display: flex;
+
+	@media screen and (max-width: 768.98px) {
+		flex-direction: column;
+	}
+
+	&__items {
+		display: flex;
+		flex-direction: column;
+		width: 50%;
+
+		@media screen and (max-width: 768.98px) {
+			flex-direction: row;
+			align-items: baseline;
+			width: 100%;
+			margin-bottom: 23px;
+			overflow: auto;
+		}
+	}
+
+	&__item {
+		font-family: 'Epilogue';
+		font-size: 22px;
+		position: relative;
+		padding-left: 50px;
+		margin-bottom: 30px;
+		white-space: nowrap;
+
+		@media screen and (max-width: 768.98px) {
+			font-size: $font-size;
+			font-family: $font-family;
+			padding: 0;
+			margin-bottom: 0;
+			margin-right: 30px;
+		}
+
+		@media screen and (max-width: 480.98px) {
+			font-size: 14px;
+			margin-right: 15px;
+		}
+
+		&::before {
+			content: '';
+			height: 1px;
+			width: 20px;
+			display: block;
+			background-color: #63718E;
+			border-radius: 40px;
+			position: absolute;
+			top: 9px;
+			left: 0;
+
+			@media screen and (max-width: 768.98px) {
+				display: none;
+			}
+		}
+
+		&_active {
+			font-weight: 700;
+			color: $main-color;
+
+			@media screen and (max-width: 480.98px) {
+				font-size: 18px;
+				font-weight: 400;
+				font-family: $font-family;
+			}
+
+			&::before{
+				background-color: $main-color;
+				height: 2px;
+				width: 40px;
+			}
+		}
+	}
+
+	&__info {
+		width: 50%;
+		align-self: flex-end;
+
+		@media screen and (max-width: 768.98px) {
+			width: 100%;
+		}
+	}
+
+	&__text {
+		display: none;
+		font-size: 18px;
+		max-width: 480px;
+
+		@media screen and (max-width: 768.98px) {
+			max-width: 100%;
+		}
+
+		&_active {
+			display: block;
+		}
+	}
+}
+
+
